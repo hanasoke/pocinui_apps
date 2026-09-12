@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pocinui/pages/program_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -45,7 +46,14 @@ class HomePage extends StatelessWidget {
                   const SizedBox(height: 20),
 
                   ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const ProgramPage(),
+                        ),
+                      );
+                    },
                     child: const Text('Daftar Sekarang'),
                   ),
                 ],
