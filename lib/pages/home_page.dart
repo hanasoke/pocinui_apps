@@ -86,23 +86,23 @@ class HomePage extends StatelessWidget {
             const SizedBox(height: 20),
 
             Padding(
-              padding: const EdgeInsets.all(16),
+              padding: const EdgeInsets.symmetric(horizontal: 16),
               child: Column(
                 children: [
                   programCard(
-                    Icons.calculate,
+                    'assets/images/icons/icon_matematika.png',
                     'Matematika',
                     'Belajar matematika dengan materi yang mudah dipahami.',
                   ),
 
                   programCard(
-                    Icons.science,
+                    'assets/images/icons/icon_biologi.png',
                     'IPA',
                     'Pelajari Fisika, Kimia, dan Biologi bersama guru Pocinui.',
                   ),
 
                   programCard(
-                    Icons.language,
+                    'assets/images/icons/icon_bahasa_inggris.png',
                     'Bahasa Inggris',
                     'Tingkatkan kemampuan grammar, vocabulary, dan speaking.',
                   ),
@@ -115,16 +115,20 @@ class HomePage extends StatelessWidget {
     );
   }
 
-  Widget programCard(IconData icon, String title, String description) {
+  Widget programCard(String imagePath, String title, String description) {
     return Card(
       margin: const EdgeInsets.only(bottom: 16),
       child: Padding(
         padding: const EdgeInsets.all(20),
         child: Row(
           children: [
-            Icon(icon, size: 50, color: Colors.blue),
+            SizedBox(
+              width: 45,
+              height: 45,
+              child: Image.asset(imagePath, fit: BoxFit.contain),
+            ),
 
-            const SizedBox(width: 20),
+            const SizedBox(width: 16),
 
             Expanded(
               child: Column(
@@ -133,14 +137,14 @@ class HomePage extends StatelessWidget {
                   Text(
                     title,
                     style: const TextStyle(
-                      fontSize: 20,
+                      fontSize: 18,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
 
-                  const SizedBox(height: 8),
+                  const SizedBox(height: 5),
 
-                  Text(description),
+                  Text(description, style: const TextStyle(fontSize: 14)),
                 ],
               ),
             ),
