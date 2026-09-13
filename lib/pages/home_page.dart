@@ -45,15 +45,6 @@ class HomePage extends StatelessWidget {
 
                   const SizedBox(height: 20),
 
-                  Image.asset(
-                    'assets/images/logo.png',
-                    width: 100,
-                    height: 100,
-                    fit: BoxFit.contain,
-                  ),
-
-                  const SizedBox(height: 16),
-
                   const Text(
                     'Bimbingan Belajar Pocinui',
                     textAlign: TextAlign.center,

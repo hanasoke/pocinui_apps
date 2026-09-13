@@ -70,12 +70,21 @@ class ProgramPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
-          'Program Belajar',
-          style: TextStyle(fontWeight: FontWeight.bold),
-        ),
         backgroundColor: Colors.blue,
         foregroundColor: Colors.white,
+
+        title: Row(
+          children: [
+            Image.asset('assets/images/logo.png', width: 40, height: 40),
+
+            const SizedBox(width: 10),
+
+            const Text(
+              'Pocinui',
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
+          ],
+        ),
       ),
       body: SafeArea(
         child: SingleChildScrollView(
