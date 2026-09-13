@@ -6,61 +6,61 @@ class ProgramPage extends StatelessWidget {
   final List<Map<String, dynamic>> programs = const [
     {
       'title': 'Matematika',
-      'icon': Icons.calculate,
+      'image': 'assets/images/icons/icon_matematika.png',
       'description':
           'Belajar matematika dengan metode yang mudah dipahami dan latihan soal terarah.',
     },
     {
       'title': 'Bahasa Indonesia',
-      'icon': Icons.menu_book,
+      'image': 'assets/images/icons/icon_bahasa_indonesia.png',
       'description':
           'Pelajari tata bahasa, teks, sastra, dan persiapan ujian Bahasa Indonesia.',
     },
     {
       'title': 'Bahasa Inggris',
-      'icon': Icons.language,
+      'image': 'assets/images/icons/icon_bahasa_inggris.png',
       'description':
           'Tingkatkan kemampuan grammar, vocabulary, reading, dan speaking.',
     },
     {
       'title': 'Fisika',
-      'icon': Icons.bolt,
+      'image': 'assets/images/icons/icon_fisika.png',
       'description':
           'Memahami konsep fisika melalui penjelasan sederhana dan latihan soal.',
     },
     {
       'title': 'Kimia',
-      'icon': Icons.science,
+      'image': 'assets/images/icons/icon_kimia.png',
       'description':
           'Belajar unsur, senyawa, reaksi kimia, dan berbagai konsep kimia sekolah.',
     },
     {
       'title': 'Biologi',
-      'icon': Icons.biotech,
+      'image': 'assets/images/icons/icon_biologi.png',
       'description':
           'Pelajari makhluk hidup, sistem tubuh, genetika, dan lingkungan.',
     },
     {
       'title': 'Ekonomi',
-      'icon': Icons.show_chart,
+      'image': 'assets/images/icons/icon_ekonomi.png',
       'description':
           'Pelajari ekonomi dasar, pasar, akuntansi, dan aktivitas ekonomi.',
     },
     {
       'title': 'Geografi',
-      'icon': Icons.public,
+      'image': 'assets/images/icons/icon_geografi.png',
       'description':
           'Belajar tentang bumi, lingkungan, kependudukan, dan fenomena geografis.',
     },
     {
       'title': 'Sosiologi',
-      'icon': Icons.groups,
+      'image': 'assets/images/icons/icon_sosiologi.png',
       'description':
           'Pelajari masyarakat, interaksi sosial, perubahan sosial, dan budaya.',
     },
     {
       'title': 'PPKn',
-      'icon': Icons.account_balance,
+      'image': 'assets/images/icons/icon_pendidikan_kewarganegaraan.png',
       'description':
           'Memahami Pancasila, kewarganegaraan, hukum, dan kehidupan bernegara.',
     },
@@ -140,7 +140,7 @@ class ProgramPage extends StatelessWidget {
                   return ProgramCard(
                     title: program['title'],
                     description: program['description'],
-                    icon: program['icon'],
+                    image: program['image'],
                   );
                 },
               ),
@@ -163,13 +163,13 @@ class ProgramPage extends StatelessWidget {
 class ProgramCard extends StatelessWidget {
   final String title;
   final String description;
-  final IconData icon;
+  final String image;
 
   const ProgramCard({
     super.key,
     required this.title,
     required this.description,
-    required this.icon,
+    required this.image,
   });
 
   @override
@@ -196,7 +196,12 @@ class ProgramCard extends StatelessWidget {
                   color: Colors.blue.shade50,
                   borderRadius: BorderRadius.circular(18),
                 ),
-                child: Icon(icon, size: 38, color: Colors.blue),
+                child: Image.asset(
+                  image,
+                  width: 50,
+                  height: 50,
+                  fit: BoxFit.contain,
+                ),
               ),
 
               const SizedBox(height: 14),
