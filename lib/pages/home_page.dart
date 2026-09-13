@@ -8,12 +8,21 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
-          'Pocinui',
-          style: TextStyle(fontWeight: FontWeight.bold),
-        ),
         backgroundColor: Colors.blue,
         foregroundColor: Colors.white,
+
+        title: Row(
+          children: [
+            Image.asset('assets/images/logo.png', width: 40, height: 40),
+
+            const SizedBox(width: 10),
+
+            const Text(
+              'Pocinui',
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
+          ],
+        ),
       ),
 
       body: SingleChildScrollView(
@@ -21,13 +30,29 @@ class HomePage extends StatelessWidget {
           children: [
             Container(
               width: double.infinity,
-              padding: const EdgeInsets.all(32),
-              color: Colors.blue.shade50,
+              padding: const EdgeInsets.all(20),
               child: Column(
                 children: [
-                  const Icon(Icons.school, size: 100, color: Colors.blue),
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(20),
+                    child: Image.asset(
+                      'assets/images/belajar.png',
+                      width: double.infinity,
+                      height: 220,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
 
                   const SizedBox(height: 20),
+
+                  Image.asset(
+                    'assets/images/logo.png',
+                    width: 100,
+                    height: 100,
+                    fit: BoxFit.contain,
+                  ),
+
+                  const SizedBox(height: 16),
 
                   const Text(
                     'Bimbingan Belajar Pocinui',
