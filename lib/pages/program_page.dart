@@ -86,6 +86,7 @@ class ProgramPage extends StatelessWidget {
           ],
         ),
       ),
+
       body: SafeArea(
         child: SingleChildScrollView(
           padding: const EdgeInsets.all(16),
