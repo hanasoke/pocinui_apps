@@ -157,14 +157,6 @@ class ProgramPage extends StatelessWidget {
           ),
         ),
       ),
-      bottomNavigationBar: NavigationBar(
-        destinations: const [
-          NavigationDestination(icon: Icon(Icons.home), label: 'Home'),
-          NavigationDestination(icon: Icon(Icons.menu_book), label: 'Program'),
-          NavigationDestination(icon: Icon(Icons.person), label: 'Guru'),
-          NavigationDestination(icon: Icon(Icons.info), label: 'Tentang'),
-        ],
-      ),
     );
   }
 }

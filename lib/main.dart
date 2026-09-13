@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pocinui/pages/main_navigation.dart';
 import 'pages/home_page.dart';
 
 void main() {
@@ -13,12 +14,12 @@ class PocinuiApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Pocinui',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
         useMaterial3: true,
       ),
-      home: const HomePage(),
+      home: const MainNavigation(),
     );
   }
 }
