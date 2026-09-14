@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'program_detail_page.dart';
 
 class ProgramPage extends StatelessWidget {
   const ProgramPage({super.key});
@@ -234,9 +235,16 @@ class ProgramCard extends StatelessWidget {
                 width: double.infinity,
                 child: OutlinedButton(
                   onPressed: () {
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      SnackBar(content: Text('Membuka detail program $title')),
-                    );
+                    if (title == 'Matematika') {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const ProgramDetailPage(
+                            namaProgram: 'Matematika',
+                          ),
+                        ),
+                      );
+                    }
                   },
                   child: const Text('Lihat Program'),
                 ),
