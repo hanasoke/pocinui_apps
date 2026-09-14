@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'pendaftaran_page.dart';
 
 class ProgramDetailPage extends StatelessWidget {
   final String namaProgram;
@@ -215,9 +216,11 @@ class ProgramDetailPage extends StatelessWidget {
               height: 55,
               child: ElevatedButton.icon(
                 onPressed: () {
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    const SnackBar(
-                      content: Text('Form pendaftaran akan dibuka'),
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) =>
+                          const PendaftaranPage(program: 'Matematika'),
                     ),
                   );
                 },
