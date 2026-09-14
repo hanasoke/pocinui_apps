@@ -235,16 +235,13 @@ class ProgramCard extends StatelessWidget {
                 width: double.infinity,
                 child: OutlinedButton(
                   onPressed: () {
-                    if (title == 'Matematika') {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const ProgramDetailPage(
-                            namaProgram: 'Matematika',
-                          ),
-                        ),
-                      );
-                    }
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) =>
+                            ProgramDetailPage(namaProgram: title),
+                      ),
+                    );
                   },
                   child: const Text('Lihat Program'),
                 ),
