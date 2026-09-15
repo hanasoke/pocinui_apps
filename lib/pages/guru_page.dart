@@ -76,7 +76,7 @@ class GuruPage extends StatelessWidget {
             color: Colors.blue.shade50,
             child: const Column(
               children: [
-                Icon(Icons.groups, size: 60, color: Colors.blue),
+                Icon(Icons.groups, size: 60, color: Colors.orange),
 
                 SizedBox(height: 10),
 
